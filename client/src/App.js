@@ -4,6 +4,7 @@ import "./App.css";
 import "./assets/styles/buttons.css";
 
 import Landing from "./pages/landing/landing";
+import SignIn from "./pages/signin/signin";
 import Chats from "./pages/chats/chats";
 import Settings from "./pages/settings/settings";
 
@@ -21,6 +22,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Landing />} />
+        <Route path="/signin" element={<SignIn />} />
         <Route path="/chats" element={<Chats />} />
         <Route path="/settings" element={<Settings />} />
       </Routes>

@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router";
 import useLocalStorage from "use-local-storage";
 
 import Navbar from "../../components/navbar/navbar";
@@ -10,6 +11,12 @@ import "./landing.css";
 
 const Landing = () => {
   const [theme, setTheme] = useLocalStorage("theme" ? "dark" : "light");
+  const navigate = useNavigate();
+
+  const handleClick = (link) => {
+    navigate(link);
+  };
+
   return (
     <React.Fragment>
       <Navbar />
@@ -26,7 +33,12 @@ const Landing = () => {
             <h1>
               Break the boundaries and connect with people all over the world
             </h1>
-            <button className="btnFill btnGetStarted">Get Started</button>
+            <button
+              className="btnFill btnGetStarted"
+              onClick={() => handleClick("/signin")}
+            >
+              Get Started
+            </button>
           </div>
         </section>
         <section className="landingLinkDevice">

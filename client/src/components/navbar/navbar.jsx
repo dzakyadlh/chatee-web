@@ -32,6 +32,7 @@ const Navbar = () => {
               className="colorModeToggleIcon"
               icon={faCircleHalfStroke}
               rotation={theme === "light" ? 180 : 0}
+              color={theme === "light" ? "black" : "white"}
             />
           </button>
         </li>
